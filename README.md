@@ -1,6 +1,6 @@
 # st
 
-My ST build. 
+My ST build. Just patched in scrollback and copy-paste to system clipboard.
 
 **PATCHES**: </br></br>
 *Scrollback*:
@@ -10,3 +10,8 @@ My ST build.
   <li>Scroll down fast: ALT+d, </li>  
   <li>Scroll up fast:   ALT+u  </li>
 </ul>
+<br><br>
+*Copy/Paste*:
+<ul>
+  <li>Copy:      ALT+c, </li>  
+  <li>Paste:      ALT+v, </li>  
