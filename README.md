@@ -2,7 +2,7 @@
 
 My ST build. 
 
-**PATCHES**:
+**PATCHES**: </br>
 *Scrollback*:
 <ul>
   <li>Scroll down:      ALT+j, </li>  
