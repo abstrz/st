@@ -2,9 +2,16 @@
 
 My ST build. 
 
-PATCHES:
-Scrollback:
-  Scroll down:      ALT+j,  
-  Scroll up:        ALT+k,  
-  Scroll down fast: ALT+d,  
-  Scroll up fast:   ALT+u  
+<ul>
+<li>
+  <ul> PATCHES:
+   <li>Scrollback:  
+       <ul>
+         <li>Scroll down:      ALT+j, </li>  
+         <li>Scroll up:        ALT+k, </li>  
+         <li>Scroll down fast: ALT+d, </li>  
+         <li>Scroll up fast:   ALT+u  </li>
+     </ul>
+    </li>
+  </ul>
+</ul>
