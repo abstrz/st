@@ -10,7 +10,7 @@ My ST build. Just patched in scrollback and copy-paste to system clipboard.
   <li>Scroll down fast: ALT+d, </li>  
   <li>Scroll up fast:   ALT+u  </li>
 </ul>
-<br>
+
 *Copy/Paste*:
 <ul>
   <li>Copy:       ALT+c, </li>  
