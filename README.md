@@ -1,7 +1,6 @@
 # st
 
-My ST build. Is patched to contain scrollback, copy/paste, and alpha
-functionality.  
+My ST build.   
 
 **PATCHES**: </br></br>
 *Scrollback*:
@@ -26,5 +25,10 @@ functionality.
 *External Pipe*:
 <ul>
   <li> ALT+l to follow links. </li>  
+</ul>
+
+*Font2*:
+<ul>
+  <li> Add other fonts in font2 array in config.h </li>
 </ul>
 

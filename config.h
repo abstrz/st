@@ -6,6 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Iosevka:size=12:antialias=true:hint=true:hintstyle=hintfull; weight=medium: slant=roman: dpi=96";
+static char *font2[] = { "JoyPixels:size=12:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
