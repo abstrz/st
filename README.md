@@ -16,6 +16,7 @@ My ST build. Just patched in scrollback and copy-paste to system clipboard.
   <li>Copy:       ALT+c, </li>  
   <li>Paste:      ALT+v, </li>  
 </ul>
+
 *Alpha*:
 <ul>
   <li>Set in config.h with float alpha.</li>  
