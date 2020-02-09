@@ -1,6 +1,7 @@
 # st
 
-My ST build. Just patched in scrollback and copy-paste to system clipboard.
+My ST build. Is patched to contain scrollback, copy/paste, and alpha
+functionality.  
 
 **PATCHES**: </br></br>
 *Scrollback*:
