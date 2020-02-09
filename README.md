@@ -22,3 +22,9 @@ functionality.
 <ul>
   <li>Set in config.h with float alpha.</li>  
 </ul>
+
+*External Pipe*:
+<ul>
+  <li> ALT+l to follow links. </li>  
+</ul>
+
