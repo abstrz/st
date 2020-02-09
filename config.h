@@ -82,6 +82,7 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
+float alpha = .99;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
@@ -166,22 +167,22 @@ static MouseShortcut mshortcuts[] = {
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
-	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
-	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
-	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-	{ MODKEY,              XK_c,           clipcopy,       {.i =  0} },
-	{ MODKEY,              XK_v,           clippaste,      {.i =  0} },
-	{ TERMMOD,              XK_Y,           clippaste,       {.i =  0} },
-	{ ShiftMask,            XK_Insert,      clippaste,       {.i =  0} },
-	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-    { MODKEY,              XK_k,            kscrollup,       {.i = 1}},
-    { MODKEY,              XK_j,            kscrolldown,     {.i = 1}},
-    { MODKEY,              XK_u,            kscrollup,     {.i = -1}},
-    { MODKEY,              XK_d,            kscrolldown,     {.i = -1}},
+	{ XK_ANY_MOD,           XK_Break,        sendbreak,      {.i =  0} },
+	{ ControlMask,          XK_Print,        toggleprinter,  {.i =  0} },
+	{ ShiftMask,            XK_Print,        printscreen,    {.i =  0} },
+	{ XK_ANY_MOD,           XK_Print,        printsel,       {.i =  0} },
+	{ TERMMOD,              XK_Prior,        zoom,           {.f = +1} },
+	{ TERMMOD,              XK_Next,         zoom,           {.f = -1} },
+	{ TERMMOD,              XK_Home,         zoomreset,      {.f =  0} },
+	{ MODKEY,               XK_c,            clipcopy,       {.i =  0} },
+	{ MODKEY,               XK_v,            clippaste,      {.i =  0} },
+	{ TERMMOD,              XK_Y,            clippaste,       {.i =  0} },
+	{ ShiftMask,            XK_Insert,       clippaste,       {.i =  0} },
+	{ TERMMOD,              XK_Num_Lock,     numlock,        {.i =  0} },
+    { MODKEY,               XK_k,            kscrollup,       {.i = 1}},
+    { MODKEY,               XK_j,            kscrolldown,     {.i = 1}},
+    { MODKEY,               XK_u,            kscrollup,     {.i = -1}},
+    { MODKEY,               XK_d,            kscrolldown,     {.i = -1}},
 };
 
 /*
