@@ -32,3 +32,8 @@ My ST build.
   <li> Add other fonts in font2 array in config.h </li>
 </ul>
 
+*newterm*:
+<ul>
+  <li> ALT+return to open new terminal in same folder. </li>
+</ul>
+
