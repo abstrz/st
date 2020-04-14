@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Iosevka:size=12:antialias=true:hint=true:hintstyle=hintfull; weight=medium: slant=roman: dpi=96";
-static char *font2[] = { "JoyPixels:size=12:antialias=true:autohint=true" };
+static char *font2[] = { "Wuncon Siji:size=12:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -83,16 +83,19 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-float alpha = .99;
+float alpha = .95;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-    "#101010",
-	"#e84f4f",
-	"#b8d68c",
-	"#e1aa5d",
-	"#7dc1cf",
-	"#9b64fb",
+    "#101010",  //black
+	"#e84f4f",  //pinkish red
+//  "#b8d68c",  //medium light shade of green
+    "#c4ac33",  //yellow
+	"#e1aa5d",  //medium light shade of brown
+    "#8c3028",  //red,
+//	"#7dc1cf",  //cyan
+//	"#9b64fb",  //purple
+    "#756b6b",  //reddish gray
 	"#6d878d",
 	"gray90",
 
@@ -111,6 +114,7 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#d7d0c7", //foreground
 	"#151515", //background
+    "#8c3028"  //red
 };
 
 
