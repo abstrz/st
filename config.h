@@ -84,48 +84,52 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 float alpha = .95;
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-    "#101010",  //black
-	"#e84f4f",  //pinkish red
-//  "#b8d68c",  //medium light shade of green
-    "#c4ac33",  //yellow
-	"#e1aa5d",  //medium light shade of brown
-    "#8c3028",  //red,
-//	"#7dc1cf",  //cyan
-//	"#9b64fb",  //purple
-    "#756b6b",  //reddish gray
-	"#6d878d",
-	"gray90",
 
-	/* 8 bright colors */
-	"gray50",
-	"#d23d3d",
-	"#a0cf5d",
-	"#f39d21",
-	"#4e9fb1",
-	"#8542ff",
-	"#42717b",
-	"white",
+  /* 8 normal colors */
+  [0] = "#5f6e89", /* black   */
+  [1] = "#443030", /* red     */
+  [2] = "#6c704a", /* green   */
+  [3] = "#9c7fb8", /* yellow  */
+  [4] = "#8cb1cf", /* blue    */
+  [5] = "#bd9fc8", /* magenta */
+  [6] = "#5e8d87", /* cyan    */
+  [7] = "#9b5353", /* white   */
 
-	[255] = 0,
+  /* 8 bright colors */
+  [8]  = "#8ebb9b", /* black   */
+  [9]  = "#3f9864", /* red     */
+  [10] = "#55a7b5", /* green   */
+  [11] = "#645435", /* yellow  */
+  [12] = "#62459a", /* blue    */
+  [13] = "#b294bb", /* magenta */
+  [14] = "#f9b800", /* cyan    */
+  [15] = "#a4d2a7", /* white   */
 
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#d7d0c7", //foreground
-	"#151515", //background
-    "#8c3028"  //red
+  /* special colors */
+  [256] = "#0f0b0f", /* background */
+  [257] = "#ffffff", /* foreground */
 };
-
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
-static unsigned int defaultrcs = 257;
+ unsigned int defaultfg = 257;
+ unsigned int defaultbg = 256;
+ unsigned int defaultcs = 257;
+ unsigned int defaultrcs = 257;
+
+/*
+ * Colors used, when the specific fg == defaultfg. So in reverse mode this
+ * will reverse too. Another logic would only make the simple feature too
+ * complex.
+ */
+static unsigned int defaultitalic = 7;
+static unsigned int defaultunderline = 7;
+
 
 /*
  * Default shape of cursor
@@ -161,9 +165,9 @@ static unsigned int defaultattr = 11;
  * Beware that overloading Button1 will disable the selection.
  */
 static MouseShortcut mshortcuts[] = {
-	/* button               mask            string */
-	{ Button4,              XK_NO_MOD,     "\031" },
-	{ Button5,              XK_NO_MOD,     "\005" },
+    /* button               mask            string */
+    { Button4,              XK_NO_MOD,     "\031" },
+    { Button5,              XK_NO_MOD,     "\005" },
 };
 
 /* Internal keyboard shortcuts. */
@@ -172,8 +176,8 @@ static MouseShortcut mshortcuts[] = {
 
 
 static char *openurlcmd[] = { "/bin/sh", "-c",
-        "sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./&%?$#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)'| uniq | sed 's/^www./http:\\/\\/www\\./g' | dmenu -h 30 -nb black -nf pink -sb magenta -sf black -i -p 'Follow which url?' -l 10 | xargs -r xdg-open",
-            "externalpipe", NULL };
+    "sed 's/.*│//g' | tr -d '\n' | grep -aEo '(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./&%?$#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)'| uniq | sed 's/^www./http:\\/\\/www\\./g' | dmenu -h 30 -nb black -nf pink -sb magenta -sf black -i -p 'Follow which url?' -l 10 | xargs -r xdg-open",
+    "externalpipe", NULL };
 
 static Shortcut shortcuts[] = {
     /* mask                 keysym          function        argument */
